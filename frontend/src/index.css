@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lime: #7CFC00;
+  --color-lime-dark: #5CB800;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2A2A2A;
+  --color-steel: #C0C0C0;
+  --color-steel-dark: #808080;
+}
+
+/* Dark mode (default) */
+:root,
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #1A1A1A;
+  --bg-card: #1A1A1A;
+  --bg-input: #1A1A1A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C0C0C0;
+  --text-muted: #808080;
+  --border-color: rgba(192, 192, 192, 0.2);
+}
+
+/* Light mode */
+.light {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F3F4F6;
+  --bg-card: #F9FAFB;
+  --bg-input: #F3F4F6;
+  --text-primary: #000000;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Theme-aware utility classes */
+.bg-theme-primary { background-color: var(--bg-primary); }
+.bg-theme-secondary { background-color: var(--bg-secondary); }
+.bg-theme-card { background-color: var(--bg-card); }
+.bg-theme-input { background-color: var(--bg-input); }
+.text-theme-primary { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.text-theme-muted { color: var(--text-muted); }
+.border-theme { border-color: var(--border-color); }
