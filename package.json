@@ -7,7 +7,6 @@
     "dev:frontend": "cd frontend && npm run dev",
     "dev:backend": "cd backend && npm run dev",
     "build": "cd frontend && npm run build",
-    "postinstall": "cd backend && npx prisma generate",
     "db:push": "cd backend && npx prisma db push",
     "db:seed": "cd backend && npx tsx prisma/seed.ts",
     "db:studio": "cd backend && npx prisma studio"
